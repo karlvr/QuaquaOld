@@ -274,8 +274,10 @@ public class QuaquaManager {
             design = LEOPARD;
         } else if (osDesign.equals("snowleopard")) {
             design = SNOW_LEOPARD;
-        } else if (osDesign.equals("lion") || osDesign.equals("mountainlion")) {
+        } else if (osDesign.equals("lion")) {
             design = LION;
+        } else if (osDesign.equals("mountainlion")) {
+        	design = MOUNTAIN_LION;
         } else {
             switch (OS) {
                 case CHEETAH:
@@ -300,9 +302,11 @@ public class QuaquaManager {
                     design = SNOW_LEOPARD;
                     break;
                 case LION:
-                case MOUNTAIN_LION:
                     design = LION;
                     break;
+                case MOUNTAIN_LION:
+                	design = MOUNTAIN_LION;
+                	break;
                 default:
                     design = SNOW_LEOPARD;
                     break;
@@ -380,6 +384,7 @@ public class QuaquaManager {
             lafs.put("SnowLeopard.15", "ch.randelshofer.quaqua.leopard.Quaqua15LeopardLookAndFeel");
             lafs.put("SnowLeopard.16", "ch.randelshofer.quaqua.snow_leopard.Quaqua16SnowLeopardLookAndFeel");
             lafs.put("Lion.16", "ch.randelshofer.quaqua.lion.Quaqua16LionLookAndFeel");
+            lafs.put("MountainLion.16", "ch.randelshofer.quaqua.mountain_lion.Quaqua16MountainLionLookAndFeel");
             lafs.put("CrossTiger.15", "ch.randelshofer.quaqua.tiger.Quaqua15TigerCrossPlatformLookAndFeel");
             lafs.put("CrossTiger.16", "ch.randelshofer.quaqua.tiger.Quaqua15TigerCrossPlatformLookAndFeel");
             lafs.put("CrossLeopard.15", "ch.randelshofer.quaqua.leopard.Quaqua15LeopardCrossPlatformLookAndFeel");
@@ -463,9 +468,11 @@ public class QuaquaManager {
                         lafKey = "SnowLeopard.16";
                         break;
                     case LION:
-                    case MOUNTAIN_LION:
                         lafKey = "Lion.16";
                         break;
+                    case MOUNTAIN_LION:
+                    	lafKey = "MountainLion.16";
+                    	break;
                     default:
                         lafKey = "SnowLeopard.16";
                         break;
@@ -488,9 +495,11 @@ public class QuaquaManager {
                         lafKey = "SnowLeopard.16";
                         break;
                     case LION:
-                    case MOUNTAIN_LION:
                         lafKey = "Lion.16";
                         break;
+                    case MOUNTAIN_LION:
+                    	lafKey = "MountainLion.16";
+                    	break;
                     default:
                         lafKey = "SnowLeopard.16";
                         break;
