@@ -10,11 +10,25 @@
  */
 package ch.randelshofer.quaqua;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Properties;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.LookAndFeel;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
+
 import ch.randelshofer.quaqua.osx.OSXFile;
-import javax.swing.*;
-import javax.swing.border.*;
-import java.util.*;
-import java.io.*;
 
 /**
  * The QuaquaManager provides bug fixes and enhancements for the Mac Look and
@@ -165,6 +179,10 @@ public class QuaquaManager {
      */
     public final static int LION = 7;
     /**
+     * Mac OS X 10.8 Lion.
+     */
+    public final static int MOUNTAIN_LION = 8;
+    /**
      * Generic Linux.
      */
     public final static int LINUX = -4;
@@ -226,6 +244,8 @@ public class QuaquaManager {
                 OS = SNOW_LEOPARD;
             } else if (osVersion.equals("10.7")) {
                 OS = LION;
+            } else if (osVersion.equals("10.8")) {
+            	OS = MOUNTAIN_LION;
             } else {
                 OS = SNOW_LEOPARD;
             }
@@ -254,7 +274,7 @@ public class QuaquaManager {
             design = LEOPARD;
         } else if (osDesign.equals("snowleopard")) {
             design = SNOW_LEOPARD;
-        } else if (osDesign.equals("lion")) {
+        } else if (osDesign.equals("lion") || osDesign.equals("mountainlion")) {
             design = LION;
         } else {
             switch (OS) {
@@ -280,6 +300,7 @@ public class QuaquaManager {
                     design = SNOW_LEOPARD;
                     break;
                 case LION:
+                case MOUNTAIN_LION:
                     design = LION;
                     break;
                 default:
@@ -442,6 +463,7 @@ public class QuaquaManager {
                         lafKey = "SnowLeopard.16";
                         break;
                     case LION:
+                    case MOUNTAIN_LION:
                         lafKey = "Lion.16";
                         break;
                     default:
@@ -466,6 +488,7 @@ public class QuaquaManager {
                         lafKey = "SnowLeopard.16";
                         break;
                     case LION:
+                    case MOUNTAIN_LION:
                         lafKey = "Lion.16";
                         break;
                     default:

@@ -12,11 +12,15 @@
 
 package ch.randelshofer.quaqua.filechooser;
 
-import ch.randelshofer.quaqua.osx.OSXFile;
+import java.io.File;
+
+import javax.swing.Icon;
+import javax.swing.JFileChooser;
+import javax.swing.UIManager;
+import javax.swing.filechooser.FileView;
+
 import ch.randelshofer.quaqua.QuaquaManager;
-import java.io.*;
-import javax.swing.*;
-import javax.swing.filechooser.*;
+import ch.randelshofer.quaqua.osx.OSXFile;
 /**
  * QuaquaFileSystemView is an enhanced FileSystemView, which provides additional
  * information about a file system required for Aqua file choosers.
@@ -78,6 +82,7 @@ public abstract class QuaquaFileSystemView extends FileSystemViewFilter {
                         className = "ch.randelshofer.quaqua.snow_leopard.filechooser.OSX16SnowLeopardFileSystemView";
                         break;
                     case QuaquaManager.LION :
+                    case QuaquaManager.MOUNTAIN_LION:
                         className = "ch.randelshofer.quaqua.lion.filechooser.OSXLionFileSystemView";
                         break;
                     case QuaquaManager.TIGER :
