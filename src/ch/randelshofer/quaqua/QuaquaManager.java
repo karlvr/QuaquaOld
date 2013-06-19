@@ -179,9 +179,13 @@ public class QuaquaManager {
      */
     public final static int LION = 7;
     /**
-     * Mac OS X 10.8 Lion.
+     * Mac OS X 10.8 Mountain Lion.
      */
     public final static int MOUNTAIN_LION = 8;
+    /**
+     * Mac OS X 10.9 Mavericks.
+     */
+    public final static int MAVERICKS = 9;
     /**
      * Generic Linux.
      */
@@ -278,6 +282,8 @@ public class QuaquaManager {
             design = LION;
         } else if (osDesign.equals("mountainlion")) {
         	design = MOUNTAIN_LION;
+        } else if (osDesign.equals("mavericks")) {
+        	design = MAVERICKS;
         } else {
             switch (OS) {
                 case CHEETAH:
@@ -306,6 +312,9 @@ public class QuaquaManager {
                     break;
                 case MOUNTAIN_LION:
                 	design = MOUNTAIN_LION;
+                	break;
+                case MAVERICKS:
+                	design = MAVERICKS;
                 	break;
                 default:
                     design = SNOW_LEOPARD;
@@ -385,6 +394,7 @@ public class QuaquaManager {
             lafs.put("SnowLeopard.16", "ch.randelshofer.quaqua.snow_leopard.Quaqua16SnowLeopardLookAndFeel");
             lafs.put("Lion.16", "ch.randelshofer.quaqua.lion.Quaqua16LionLookAndFeel");
             lafs.put("MountainLion.16", "ch.randelshofer.quaqua.mountain_lion.Quaqua16MountainLionLookAndFeel");
+            lafs.put("Mavericks.16", "ch.randelshofer.quaqua.mountain_lion.Quaqua16MavericksLookAndFeel");
             lafs.put("CrossTiger.15", "ch.randelshofer.quaqua.tiger.Quaqua15TigerCrossPlatformLookAndFeel");
             lafs.put("CrossTiger.16", "ch.randelshofer.quaqua.tiger.Quaqua15TigerCrossPlatformLookAndFeel");
             lafs.put("CrossLeopard.15", "ch.randelshofer.quaqua.leopard.Quaqua15LeopardCrossPlatformLookAndFeel");
@@ -473,6 +483,9 @@ public class QuaquaManager {
                     case MOUNTAIN_LION:
                     	lafKey = "MountainLion.16";
                     	break;
+                    case MAVERICKS:
+                    	lafKey = "Mavericks.16";
+                    	break;
                     default:
                         lafKey = "SnowLeopard.16";
                         break;
@@ -499,6 +512,9 @@ public class QuaquaManager {
                         break;
                     case MOUNTAIN_LION:
                     	lafKey = "MountainLion.16";
+                    	break;
+                    case MAVERICKS:
+                    	lafKey = "Mavericks.16";
                     	break;
                     default:
                         lafKey = "SnowLeopard.16";

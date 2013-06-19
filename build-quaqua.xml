@@ -434,6 +434,7 @@ SnowLeopard.15=ch.randelshofer.quaqua.subset.QuaquaLeopardFileChooserLAF;
 SnowLeopard.16=ch.randelshofer.quaqua.subset.QuaquaLeopardFileChooserLAF;
 Lion.16=ch.randelshofer.quaqua.subset.QuaquaLionFileChooserLAF;
 MountainLion.16=ch.randelshofer.quaqua.subset.QuaquaLionFileChooserLAF;
+Mavericks.16=ch.randelshofer.quaqua.subset.QuaquaLionFileChooserLAF;
 </echo>
         <jar basedir="${builddir}" compress="true" 
             jarfile="${distdir}/quaqua-filechooser-only.jar" 
@@ -464,6 +465,7 @@ SnowLeopard.15=ch.randelshofer.quaqua.leopard.Quaqua15LeopardLookAndFeel;
 SnowLeopard.16=ch.randelshofer.quaqua.snow_leopard.Quaqua16SnowLeopardLookAndFeel;
 Lion.16=ch.randelshofer.quaqua.lion.Quaqua16LionLookAndFeel;
 MountainLion.16=ch.randelshofer.quaqua.mountain_lion.Quaqua16MountainLionLookAndFeel;
+Mavericks.16=ch.randelshofer.quaqua.mavericks.Quaqua16MavericksLookAndFeel;
 CrossTiger.15=ch.randelshofer.quaqua.tiger.Quaqua15TigerCrossPlatformLookAndFeel; 
 CrossLeopard.15=ch.randelshofer.quaqua.leopard.Quaqua15LeopardCrossPlatformLookAndFeel; 
 CrossSnowLeopard.15=ch.randelshofer.quaqua.leopard.Quaqua15LeopardCrossPlatformLookAndFeel;
