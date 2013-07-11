@@ -250,6 +250,8 @@ public class QuaquaManager {
                 OS = LION;
             } else if (osVersion.equals("10.8")) {
             	OS = MOUNTAIN_LION;
+            } else if (osVersion.equals("10.9")) {
+            	OS = MAVERICKS;
             } else {
                 OS = SNOW_LEOPARD;
             }
